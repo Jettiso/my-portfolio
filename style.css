@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@300;400&family=Roboto+Mono:wght@500&display=swap");
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgColor: #181818;
+}
+
+body {
+    background-color: #181818;
+}
+
+a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav span {
+    font-family: "Roboto Mono", monospace;
+    color: #f2f2f2;
+    letter-spacing: 1.5px;
+    font-size: 4rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    font-size: 2rem;
+}
+
+nav ul li a {
+    display: inline-block;
+    position: relative;
+    color: #f2f2f2;
+    font-family: "Roboto Mono", monospace;
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
